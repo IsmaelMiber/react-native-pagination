@@ -4,7 +4,7 @@
   "description": "The best Pagination component for React Native.",
   "main": "react-native-pagination/index.js",
   "dependencies": {
-    "react-native-vector-icons": "^4.3.0"
+    "react-native-vector-icons": "^9.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
