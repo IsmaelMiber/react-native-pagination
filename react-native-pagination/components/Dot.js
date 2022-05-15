@@ -155,7 +155,11 @@ export default class Dot extends Component {
       if (endDotPositionSwap)dotPositionSwap = !dotPositionSwap;
       // Console.warn(" dotIconFamily: ",dotIconFamily);
       onPressDot = (item) => {
-        this.props.listRef.scrollToEnd();
+        try {
+          this.props.listRef.scrollToEnd();
+        } catch(error) {
+         console.error("listRef is undefined", error)
+        }
         // If(!disableEndDotOnPressNavigation){try {this.props.listRef.scrollToItem(jumpItems[1])} catch (e) {console.log(" e: ",e);}}
         if (endDotOnPress)endDotOnPress(item);
       };
